@@ -28,10 +28,12 @@ jobs:
     - name: Build docker image
       run: |
         docker build -t zubrodry/docker-graphql:0.0.2 .
+        docker build -t zubrodry/docker-graphql:latest .
         
     - name: Push Docker
       run: |
         docker push zubrodry/docker-graphql:0.0.2
+        docker push zubrodry/docker-graphql:latest
     
     
     #- name: Build the Docker image
